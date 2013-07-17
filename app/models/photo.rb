@@ -1,3 +1,4 @@
+require 'safe_destroy'
 class Photo < ActiveRecord::Base
    attr_accessible :name, :image, :description, :user_id, :remove_image, :image_cache
    mount_uploader :image, ImageUploader
@@ -6,6 +7,9 @@ class Photo < ActiveRecord::Base
    validates_presence_of :name, :image, :user_id
 
    after_commit :email_admins, on: :create
+
+
+   include SafeDestroy
 
    
    def email_admins
