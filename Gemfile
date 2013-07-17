@@ -20,7 +20,7 @@ group :assets do
   gem 'will_paginate-bootstrap'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', "2.3.0"
 gem 'rspec-rails'
 gem 'spork'
 gem 'carrierwave'
