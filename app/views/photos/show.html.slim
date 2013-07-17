@@ -1,0 +1,10 @@
+h2 = title = @photo.name
+
+= image_tag @photo.image
+
+.actions
+  .btn-toolbar
+    = link_to "edit", edit_photo_path(@photo), class: 'btn btn-primary'
+    = link_to "remove", @photo, confirm: "u sure?", method: :delete, 
+                class: 'btn btn-danger'
+  = link_to "back to user page", user_path(current_user), class: 'btn btn-link'

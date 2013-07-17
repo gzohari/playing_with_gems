@@ -1,0 +1,10 @@
+= simple_form_for @photo, :html => {:multipart => true, :class => 'form-horizontal'} do |f|
+  fieldset
+    legend = controller.action_name.capitalize << " Photo"
+    = f.hidden_field :user_id
+    = f.input :name
+    = f.input :description
+    = f.input :image
+
+    .form-actions
+      = f.submit nil, class: 'btn btn-primary'

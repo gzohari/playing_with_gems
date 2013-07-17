@@ -1,0 +1,13 @@
+.container
+  - for ph in @photos
+      .photo
+        = link_to(image_tag(ph.image_url(:thumb)), ph) if ph.image
+       
+      
+= will_paginate @photos, previous_label: h("<"), next_label: h(">"), 
+  renderer:  BootstrapPagination::Rails
+
+.actions
+  = link_to "Upload image", new_photo_path, class: 'btn btn-secondary'
+
+
