@@ -1,0 +1,14 @@
+.jumbotron
+    h1
+      | You must B Boris
+    p.lead
+      | Sign up or sign in and you'll get to upload pics and much more!
+      br
+      small 
+         | Well no, that's it actually, just pics.
+
+    .row-fluid
+      .span6
+        = link_to "Sign In", new_user_session_path, :class => "btn btn-success"
+      .span6
+        = link_to "Sign Up", new_user_registration_path, :class => "btn btn-success"
